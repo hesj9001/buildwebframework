@@ -3,9 +3,11 @@ package org.shijia4j.chapter2.test;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.shijia4j.chapter2.helper.DatabaseHelper;
 import org.shijia4j.chapter2.model.Customer;
 import org.shijia4j.chapter2.service.CustomerService;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,8 +23,9 @@ public class CustomerServletTest {
   }
 
   @Before
-  public void init() {
-    // TODO
+  public void init() throws IOException {
+    String file = "sql/customer_init.sql";
+    DatabaseHelper.executeSqlFile(file);
   }
 
   @Test
