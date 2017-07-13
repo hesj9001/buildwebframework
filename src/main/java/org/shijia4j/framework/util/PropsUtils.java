@@ -1,4 +1,4 @@
-package org.shijia4j.util;
+package org.shijia4j.framework.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

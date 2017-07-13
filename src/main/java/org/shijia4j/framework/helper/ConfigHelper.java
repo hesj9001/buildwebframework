@@ -1,7 +1,7 @@
-package org.shijia4j.helper;
+package org.shijia4j.framework.helper;
 
 import org.shijia4j.framework.ConfigConstant;
-import org.shijia4j.util.PropsUtils;
+import org.shijia4j.framework.util.PropsUtils;
 
 import java.util.Properties;
 
