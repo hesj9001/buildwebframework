@@ -4,6 +4,7 @@ import org.shijia4j.framework.annotation.Controller;
 import org.shijia4j.framework.annotation.Service;
 import org.shijia4j.framework.util.ClassUtils;
 
+import java.lang.annotation.Annotation;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -47,5 +48,25 @@ public class ClassHelper {
     beanClassSet.addAll(getServiceClassSet());
     beanClassSet.addAll(getControllerClassSet());
     return beanClassSet;
+  }
+
+  public static Set<Class<?>> getClassSetBySuper(Class<?> superClass) {
+    Set<Class<?>> classSet = new HashSet<>();
+    for(Class<?> clazz : CLASS_SET) {
+      if(superClass.isAssignableFrom(clazz) && !superClass.equals(clazz)) {
+        classSet.add(clazz);
+      }
+    }
+    return classSet;
+  }
+
+  public static Set<Class<?>> getClassSetByAnnotation(Class<? extends Annotation> annotationClass) {
+    Set<Class<?>> classSet = new HashSet<>();
+    for(Class<?> clazz : CLASS_SET) {
+      if(clazz.isAnnotationPresent(annotationClass)) {
+        classSet.add(clazz);
+      }
+    }
+    return classSet;
   }
 }

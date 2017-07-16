@@ -1,5 +1,6 @@
 package org.shijia4j.framework.bean;
 
+import org.apache.commons.collections4.MapUtils;
 import org.shijia4j.framework.util.CastUtils;
 
 import java.util.Map;
@@ -21,5 +22,9 @@ public class Param {
 
   public Map<String, Object> getMap() {
     return paramMap;
+  }
+
+  public boolean isEmpty() {
+    return MapUtils.isEmpty(paramMap);
   }
 }
