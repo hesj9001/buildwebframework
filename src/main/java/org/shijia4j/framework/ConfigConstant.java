@@ -14,4 +14,5 @@ public interface ConfigConstant {
   String APP_BASE_PACKAGE = "shijia.framework.app.base_package";
   String APP_JSP_PATH = "shijia.framework.app.jsp_path";
   String APP_ASSET_PATH = "shijia.framework.app.asset_path";
+  String APP_UPLOAD_LIMIT = "shijia.framework.app.upload_limit";
 }
